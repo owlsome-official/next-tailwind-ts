@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🔺 next-tailwind-ts 🔺
 
-## Getting Started
+## 📘 About
 
-First, run the development server:
+The NextJS template with TypeScript, and tailwindcss for scaffolding your project.
+
+## 📝 Table of Contents
+
+- [🔺 next-tailwind-ts 🔺](#-next-tailwind-ts-)
+  - [📘 About](#-about)
+  - [📝 Table of Contents](#-table-of-contents)
+  - [📦 Template contains](#-template-contains)
+  - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
+  - [📝 Versions (Last 2 Minor Version)](#-versions-last-2-minor-version)
+    - [v0.1.0 - `2023-12-28`](#v010---2023-12-28)
+    - [Version History](#version-history)
+  - [📌 Get Started](#-get-started)
+    - [Want some more ?](#want-some-more-)
+
+## 📦 Template contains
+
+- [x] React 18
+- [x] NextJS 14.0.4
+- [x] TailwindCSS 3.4.0
+- [x] TypeScript 5
+
+## 💎 Pre-loaded dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app@latest
+yarn add axios react-loading-randomizable
+yarn add -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 Versions (Last 2 Minor Version)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### v0.1.0 - `2023-12-28`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Initialized code structure with [Pantone Color of the year 2024](https://www.pantone.com/color-of-the-year/2024)
+- Icon from [Google Material Icons](https://iconbuddy.app/ic)
+- Palette from [coolors](https://coolors.co/ffbe98-d35269-c7efcf-826aed-0c1821)
 
-## Learn More
+### Version History
 
-To learn more about Next.js, take a look at the following resources:
+... [more](./CHANGELOG.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📌 Get Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Initialized (don't forget to rename `my-project`)
 
-## Deploy on Vercel
+    ```bash
+    npx degit buildingwatsize/next-tailwind-ts#main my-project
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Go to project folder
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    cd my-project
+    ```
+
+3. Set up dependencies
+
+    ```bash
+    yarn
+    ```
+
+4. Run!
+
+    ```bash
+    yarn dev
+    ```
+
+### Want some more ?
+
+see [NextJS Doc](https://nextjs.org/docs)
+
+🌈 NextJS Template – Made with ❤️ by Watsize 🌈
