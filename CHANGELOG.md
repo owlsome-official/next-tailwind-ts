@@ -2,12 +2,18 @@
 
 ## Version History
 
+### [v0.2.1] - `2024-02-06`
+
+- Updated Dependencies
+- Added default next config
+
+[v0.2.1]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.2.1
+
 ### [v0.2.0] - `2024-01-30`
 
 - Updated Next 14.1
 
 [v0.2.0]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.2.0
-
 
 ### [v0.1.0] - `2023-01-26`
 
