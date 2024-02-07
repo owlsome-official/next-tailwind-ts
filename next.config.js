@@ -9,8 +9,6 @@ const cspHeader = `
   base-uri 'self';
   form-action 'self';
   frame-ancestors 'none';
-  block-all-mixed-content;
-  upgrade-insecure-requests;
 `;
 const nextConfig = {
   async headers() {
@@ -27,8 +25,8 @@ const nextConfig = {
     ];
   },
   compiler: {
-    removeConsole: true, // suppress all logs as default
-    reactRemoveProperties: true, // remove react properties (Default: ^data-test)
+    removeConsole: process.env.NODE_ENV === "production", // suppress all logs on production
+    reactRemoveProperties: process.env.NODE_ENV === "production", // remove react properties on production (Included: ^data-test)
   },
   reactStrictMode: true,
   output: "standalone",
