@@ -12,6 +12,7 @@ The NextJS template with TypeScript, and tailwindcss for scaffolding your projec
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Last 2 Minor Version)](#-versions-last-2-minor-version)
+    - [v0.2.4 - `2024-02-21`](#v024---2024-02-21)
     - [v0.2.3 - `2024-02-07`](#v023---2024-02-07)
     - [v0.2.2 - `2024-02-06`](#v022---2024-02-06)
     - [v0.2.1 - `2024-02-06`](#v021---2024-02-06)
@@ -38,6 +39,10 @@ npx tailwindcss init -p
 ```
 
 ## 📝 Versions (Last 2 Minor Version)
+
+### v0.2.4 - `2024-02-21`
+
+- Updated dependencies
 
 ### v0.2.3 - `2024-02-07`
 

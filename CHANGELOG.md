@@ -2,6 +2,12 @@
 
 ## Version History
 
+### [v0.2.4] - `2024-02-21`
+
+- Updated dependencies
+
+[v0.2.4]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.2.4
+
 ### [v0.2.3] - `2024-02-07`
 
 - Updated default csp header
