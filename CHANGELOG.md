@@ -2,6 +2,12 @@
 
 ## Version History
 
+### [v0.2.8] - `2024-08-15`
+
+- Updated dependencies
+
+[v0.2.8]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.2.8
+
 ### [v0.2.7] - `2024-08-15`
 
 - Updated dependencies
