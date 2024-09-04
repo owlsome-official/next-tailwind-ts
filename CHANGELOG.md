@@ -2,6 +2,15 @@
 
 ## Version History
 
+### [v0.3.0] - `2024-09-04`
+
+- Added supported cacheHandler with Redis for scalable infrastructure
+- Added Prettier configuration files
+- Updated Docker and dockerignore
+- Fixed known vulnerabilities via `npx yarn-audit-fix`
+
+[v0.3.0]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.3.0
+
 ### [v0.2.8] - `2024-08-15`
 
 - Updated dependencies
