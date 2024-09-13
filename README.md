@@ -105,7 +105,7 @@ npx tailwindcss init -p
 1. Initialized (don't forget to rename `my-project`)
 
     ```bash
-    npx degit buildingwatsize/next-tailwind-ts#main my-project
+    npx degit owlsome-official/next-tailwind-ts#main my-project
     ```
 
 2. Go to project folder
