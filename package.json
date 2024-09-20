@@ -1,6 +1,6 @@
 {
   "name": "next-tailwind-ts",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -8,25 +8,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^1.7.4",
-    "next": "^14.2.5",
+    "axios": "^1.7.7",
+    "next": "^14.2.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loading-randomizable": "^1.0.3",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@types/node": "^22.3.0",
-    "@types/react": "^18.3.3",
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/typescript-estree": "^8.1.0",
+    "@typescript-eslint/typescript-estree": "^8.6.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8.4.41",
+    "eslint-config-next": "14.2.13",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2"
   }
 }

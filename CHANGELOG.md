@@ -2,6 +2,13 @@
 
 ## Version History
 
+### [v0.3.1] - `2024-09-20`
+
+- Fixed known vulnerabilities
+- Updated dependencies
+
+[v0.3.1]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.3.1
+
 ### [v0.3.0] - `2024-09-04`
 
 - Added supported cacheHandler with Redis for scalable infrastructure
