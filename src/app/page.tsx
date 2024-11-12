@@ -1,5 +1,5 @@
-import ActionZone from "@/components/Wrapper/ActionZone";
-import AfterInstallation from "@/components/Wrapper/AfterInstallation";
+import ActionZone from "@/components/Common/ActionZone";
+import AfterInstallation from "@/components/Common/AfterInstallation";
 
 const Home = () => {
   return (

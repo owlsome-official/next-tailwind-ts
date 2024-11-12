@@ -8,4 +8,14 @@
   }
 }
 
-/* NOTE: globals.css is so small which we currently don't need to use `postcss-import` for separate files  */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}

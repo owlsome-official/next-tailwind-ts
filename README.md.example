@@ -20,7 +20,9 @@ REPLACE_WITH_YOUR_PROJECT_NAME is ...
 
 ## 📦 Built With
 
-- [x] React 18 with TypeScript
+- [x] React 19 
+- [x] Next.js 15
+- [x] TypeScript
 - [x] TailwindCSS
 
 ## ⚒ Structure
@@ -85,4 +87,4 @@ REPLACE_WITH_YOUR_PROJECT_NAME is ...
     yarn start
     ```
 
-🌈 NextJS Template `buildingwatsize/next-tailwind-ts` – Made with ❤️ by Watsize 🌈
+🌈 NextJS Template `owlsome-official/next-tailwind-ts` – Made with ❤️ by Watsize 🌈

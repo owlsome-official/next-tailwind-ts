@@ -2,6 +2,14 @@
 
 ## Version History
 
+### [v0.4.0] - `2024-11-12`
+
+- Upgraded to ✨ [Next.js 15](https://nextjs.org/blog/next-15) come with React 19 ✨
+- Updated dependencies
+- Refactored on code structure
+
+[v0.4.0]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.4.0
+
 ### [v0.3.1] - `2024-09-20`
 
 - Fixed known vulnerabilities

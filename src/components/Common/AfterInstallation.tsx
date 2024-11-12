@@ -63,8 +63,8 @@ const AfterInstallation = () => {
           </strong>
           <ul className="list-[upper-roman] break-words pl-8">
             <li>REPLACE_WITH_YOUR_PROJECT_NAME</li>
-            <li>REPLACE_WITH_YOUR_APP_GIT_LINK</li>
             <li>REPLACE_WITH_YOUR_APP_API</li>
+            <li>REPLACE_WITH_YOUR_APP_GIT_LINK</li>
           </ul>
         </div>
         <sup className="opacity-10">

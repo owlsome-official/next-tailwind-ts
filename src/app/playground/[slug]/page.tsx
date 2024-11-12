@@ -1,14 +1,23 @@
-import { SSRDelay } from "@/actions/ssr-delay";
+import { SSRDelay } from "@/actions/utils";
+
+export async function generateStaticParams() {
+  const availableList = ["red", "green", "blue"];
+
+  return availableList.map((color) => ({
+    slug: color,
+  }));
+}
 
 type Props = {
-  params: {
-    view: string;
-  };
+  params: Promise<{
+    slug: string;
+  }>;
 };
 
-const Page = async (props: Props) => {
+const Page = async ({ params }: Props) => {
   let bg = "";
-  switch (props.params.view) {
+  const slug = (await params).slug;
+  switch (slug) {
     case "red":
       bg = "bg-red-300 text-red-600";
       break;
@@ -23,7 +32,7 @@ const Page = async (props: Props) => {
   }
 
   // NOTE: A simple loading for demonstration of SSR Component
-  const res = await SSRDelay(props.params.view);
+  const res = await SSRDelay(slug);
 
   return (
     <div

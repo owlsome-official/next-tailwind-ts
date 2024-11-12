@@ -2,7 +2,7 @@
 
 ## 📘 About
 
-The NextJS template with TypeScript, and tailwindcss for scaffolding your project.
+The Next.js template with TypeScript, and Tailwind CSS for scaffolding your project.
 
 ## 📝 Table of Contents
 
@@ -12,39 +12,34 @@ The NextJS template with TypeScript, and tailwindcss for scaffolding your projec
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Last 2 Minor Version)](#-versions-last-2-minor-version)
+    - [v0.4.0 - `2024-11-12`](#v040---2024-11-12)
     - [v0.3.1 - `2024-09-20`](#v031---2024-09-20)
     - [v0.3.0 - `2024-09-04`](#v030---2024-09-04)
-    - [v0.2.8 - `2024-08-15`](#v028---2024-08-15)
-    - [v0.2.7 - `2024-08-15`](#v027---2024-08-15)
-    - [v0.2.6 - `2024-04-18`](#v026---2024-04-18)
-    - [v0.2.5 - `2024-04-17`](#v025---2024-04-17)
-    - [v0.2.4 - `2024-02-21`](#v024---2024-02-21)
-    - [v0.2.3 - `2024-02-07`](#v023---2024-02-07)
-    - [v0.2.2 - `2024-02-06`](#v022---2024-02-06)
-    - [v0.2.1 - `2024-02-06`](#v021---2024-02-06)
-    - [v0.2.0 - `2024-01-30`](#v020---2024-01-30)
-    - [v0.1.0 - `2023-12-28`](#v010---2023-12-28)
     - [Version History](#version-history)
   - [📌 Get Started](#-get-started)
     - [Want some more ?](#want-some-more-)
 
 ## 📦 Template contains
 
-- [x] React 18.x
-- [x] NextJS 14.x
-- [x] TailwindCSS 3.x
+- [x] React 19.x
+- [x] Next.js 15.x
+- [x] Tailwind CSS 3.x
 - [x] TypeScript 5.x
 
 ## 💎 Pre-loaded dependencies
 
 ```bash
-npx create-next-app@latest
+yarn create next-app next-tailwind-ts
 yarn add axios react-loading-randomizable
-yarn add -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
 ```
 
 ## 📝 Versions (Last 2 Minor Version)
+
+### v0.4.0 - `2024-11-12`
+
+- Upgraded to ✨ [Next.js 15](https://nextjs.org/blog/next-15) come with React 19 ✨
+- Updated dependencies
+- Refactored on code structure
 
 ### v0.3.1 - `2024-09-20`
 
@@ -57,50 +52,6 @@ npx tailwindcss init -p
 - Added Prettier configuration files
 - Updated Docker and dockerignore
 - Fixed known vulnerabilities via `npx yarn-audit-fix`
-
-### v0.2.8 - `2024-08-15`
-
-- Updated dependencies
-
-### v0.2.7 - `2024-08-15`
-
-- Updated dependencies
-
-### v0.2.6 - `2024-04-18`
-
-- Updated dependencies
-
-### v0.2.5 - `2024-04-17`
-
-- Updated dependencies
-
-### v0.2.4 - `2024-02-21`
-
-- Updated dependencies
-
-### v0.2.3 - `2024-02-07`
-
-- Updated default csp header
-- Adjusted compiler config for non-production env
-
-### v0.2.2 - `2024-02-06`
-
-- Added default CSP (pre-defined)
-
-### v0.2.1 - `2024-02-06`
-
-- Updated Dependencies
-- Added default next config
-
-### v0.2.0 - `2024-01-30`
-
-- Updated Next 14.1
-
-### v0.1.0 - `2023-12-28`
-
-- Initialized code structure with [Pantone Color of the year 2024](https://www.pantone.com/color-of-the-year/2024)
-- Icon from [Google Material Icons](https://iconbuddy.app/ic)
-- Palette from [coolors](https://coolors.co/ffbe98-d35269-c7efcf-826aed-0c1821)
 
 ### Version History
 
@@ -134,6 +85,12 @@ npx tailwindcss init -p
 
 ### Want some more ?
 
-see [NextJS Doc](https://nextjs.org/docs)
+- `✨ Recommended` - shadcn/ui
 
-🌈 NextJS Template – Made with ❤️ by Watsize 🌈
+    A beauty and powerful UI Components, get started with it [shadcn/ui](https://ui.shadcn.com/docs/installation/next).
+
+- more Next.js?
+
+    see [Next.js Doc](https://nextjs.org/docs)
+
+> 🌈 Next.js Template – Made with ❤️ by Watsize 🌈

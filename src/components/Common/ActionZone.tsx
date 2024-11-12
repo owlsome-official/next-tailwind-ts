@@ -1,10 +1,10 @@
 "use client";
 
-import { SSRDelay } from "@/actions/ssr-delay";
+import { SSRDelay } from "@/actions/utils";
 import Spinner from "@/components/Loading/Spinner";
 import Link from "next/link";
 import { useState } from "react";
-import OverlayLoadingCustom from "../Loading/OverlayLoadingCustom";
+import { OverlayLoading } from "react-loading-randomizable";
 
 const ActionZone = () => {
   const [loading, setLoading] = useState(false);
@@ -16,7 +16,7 @@ const ActionZone = () => {
 
   return (
     <div id="action" className="flex items-center justify-center gap-4">
-      <OverlayLoadingCustom active={loading} className="absolute inset-0" />
+      <OverlayLoading active={loading} className="absolute inset-0" />
       <div className="flex-1 text-center">
         {loading ? (
           <Spinner />
