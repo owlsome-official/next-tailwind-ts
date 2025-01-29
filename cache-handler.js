@@ -1,81 +1,44 @@
 import { CacheHandler } from "@neshca/cache-handler";
 import createLruHandler from "@neshca/cache-handler/local-lru";
-import createRedisHandler from "@neshca/cache-handler/redis-stack";
-import { PHASE_PRODUCTION_BUILD } from "next/constants";
+import createRedisHandler from "@neshca/cache-handler/redis-strings";
 import { createClient } from "redis";
 
-/* from https://caching-tools.github.io/next-shared-cache/redis */
+const redisURL = process.env.REDIS_URL ?? "redis://localhost:6379";
+const client = createClient({
+  url: redisURL,
+  name: "next-cache",
+});
+
+client.on("error", (error) => {
+  console.error({ title: "Redis Error", err: error, msg: error?.message });
+});
+
 CacheHandler.onCreation(async ({ buildId }) => {
-  let client;
-  // use redis client during build could cause issue https://github.com/caching-tools/next-shared-cache/issues/284#issuecomment-1919145094
-  if (PHASE_PRODUCTION_BUILD !== process.env.NEXT_PHASE) {
-    try {
-      // Create a Redis client.
-      client = createClient({
-        url: process.env.REDIS_URL ?? "redis://localhost:6379",
-        name: "next-cache",
-      });
+  let redisHandler;
 
-      // Redis won't work without error handling.
-      // NB do not throw exceptions in the redis error listener,
-      // because it will prevent reconnection after a socket exception.
-      client.on("error", (e) => {
-        if (typeof process.env.NEXT_PRIVATE_DEBUG_CACHE !== "undefined") {
-          console.warn("Redis error", e);
-        }
-      });
-    } catch (error) {
-      console.warn("Failed to create Redis client:", error);
-    }
-  }
+  if (buildId) {
+    await client.connect();
 
-  if (client) {
-    try {
-      console.info("Connecting Redis client...");
-
-      // Wait for the client to connect.
-      // Caveat: This will block the server from starting until the client is connected.
-      // And there is no timeout. Make your own timeout if needed.
-      await client.connect();
-      console.info("Redis client connected.");
-    } catch (error) {
-      console.warn("Failed to connect Redis client:", error);
-
-      console.warn("Disconnecting the Redis client...");
-      // Try to disconnect the client to stop it from reconnecting.
-      client
-        .disconnect()
-        .then(() => {
-          console.info("Redis client disconnected.");
-        })
-        .catch(() => {
-          console.warn(
-            "Failed to quit the Redis client after failing to connect."
-          );
-        });
-    }
-  }
-
-  /** @type {import("@neshca/cache-handler").Handler | null} */
-  let redisHandler = null;
-  if (client?.isReady) {
-    // Create the `redis-stack` Handler if the client is available and connected.
-    redisHandler = await createRedisHandler({
+    const keyPrefix = `REPLACE_WITH_YOUR_PROJECT_NAME-cache-${buildId}:`;
+    redisHandler = createRedisHandler({
       client,
       timeoutMs: 5000,
-      keyPrefix: `next-cache-${buildId ?? "default"}:`,
+      keyPrefix,
+    });
+    console.info({
+      buildId,
+      redisURL,
+      connection: "connected",
+      isReady: client.isReady,
+      isOpen: client.isOpen,
+      keyPrefix,
     });
   }
-  // Fallback to LRU handler if Redis client is not available.
-  // The application will still work, but the cache will be in memory only and not shared.
-  const LRUHandler = createLruHandler();
-  console.warn(
-    "Falling back to LRU handler because Redis client is not available."
-  );
 
+  const localHandler = createLruHandler();
   return {
-    handlers: [redisHandler, LRUHandler],
+    handlers: [redisHandler, localHandler],
   };
 });
 
-module.exports = CacheHandler;
+export default CacheHandler;

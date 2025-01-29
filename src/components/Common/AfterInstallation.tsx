@@ -10,7 +10,7 @@ const AfterInstallation = () => {
     <div className="w-full p-1.5">
       <div className="flex flex-col p-8">
         <div className="mb-4 flex flex-col justify-between sm:flex-row">
-          <div className="bg-gradient-to-l from-accent to-accent bg-clip-text text-2xl font-bold text-transparent">
+          <div className="from-primary to-primary bg-linear-to-l bg-clip-text text-2xl font-bold text-transparent">
             After Installation
           </div>
           <div className="flex flex-col items-end gap-1 text-base">
@@ -35,8 +35,8 @@ const AfterInstallation = () => {
                 target="_blank"
                 className="flex items-center gap-1"
               >
-                <div className="h-3 w-3 bg-[#FFBE98] shadow" />
-                Pantone Color of the Year 2024 - Peach Fuzz
+                <div className="h-3 w-3 bg-[#9E7A68] shadow-sm" />
+                Pantone Color of the Year 2025 - Mocca Mousse
               </a>
             </div>
           </div>
@@ -57,11 +57,11 @@ const AfterInstallation = () => {
         <div className="py-4">
           <strong>
             You have to edit text by name below this{" "}
-            <span className="text-accent">
+            <span className="text-primary">
               {`(Spoiled Alert!, use "Find All and Replace")`}
             </span>
           </strong>
-          <ul className="list-[upper-roman] break-words pl-8">
+          <ul className="list-[upper-roman] pl-8 break-words">
             <li>REPLACE_WITH_YOUR_PROJECT_NAME</li>
             <li>REPLACE_WITH_YOUR_APP_API</li>
             <li>REPLACE_WITH_YOUR_APP_GIT_LINK</li>

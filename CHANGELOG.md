@@ -2,6 +2,12 @@
 
 ## Version History
 
+### [v0.5.0] - `2025-01-29`
+
+- Updated dependencies
+- Added Redis as Next.js Cache Handler
+- New look: [Pantone Color of the year 2025](https://www.pantone.com/color-of-the-year/2025) & [Pallete](https://coolors.co/2e5266-bed0d6-e1dfde-9e7a68-481d24)
+
 ### [v0.4.0] - `2024-11-12`
 
 - Upgraded to ✨ [Next.js 15](https://nextjs.org/blog/next-15) come with React 19 ✨

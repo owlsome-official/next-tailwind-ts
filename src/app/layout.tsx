@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(font.className, "antialiased")}>
-        <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-tr from-primary to-accent p-8 sm:p-12">
+        <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-tr from-primary to-accent p-8 sm:p-12">
           {children}
         </main>
       </body>
