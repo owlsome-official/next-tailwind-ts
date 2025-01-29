@@ -12,9 +12,8 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Last 2 Minor Version)](#-versions-last-2-minor-version)
+    - [v0.5.0 - `2025-01-29`](#v050---2025-01-29)
     - [v0.4.0 - `2024-11-12`](#v040---2024-11-12)
-    - [v0.3.1 - `2024-09-20`](#v031---2024-09-20)
-    - [v0.3.0 - `2024-09-04`](#v030---2024-09-04)
     - [Version History](#version-history)
   - [📌 Get Started](#-get-started)
     - [Want some more ?](#want-some-more-)
@@ -23,7 +22,7 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
 
 - [x] React 19.x
 - [x] Next.js 15.x
-- [x] Tailwind CSS 3.x
+- [x] Tailwind CSS 4.x
 - [x] TypeScript 5.x
 
 ## 💎 Pre-loaded dependencies
@@ -35,23 +34,17 @@ yarn add axios react-loading-randomizable
 
 ## 📝 Versions (Last 2 Minor Version)
 
+### v0.5.0 - `2025-01-29`
+
+- Updated dependencies
+- Added Redis as Next.js Cache Handler
+- New look: [Pantone Color of the year 2025](https://www.pantone.com/color-of-the-year/2025) & [Palette](https://coolors.co/2e5266-bed0d6-e1dfde-9e7a68-481d24)
+
 ### v0.4.0 - `2024-11-12`
 
 - Upgraded to ✨ [Next.js 15](https://nextjs.org/blog/next-15) come with React 19 ✨
 - Updated dependencies
 - Refactored on code structure
-
-### v0.3.1 - `2024-09-20`
-
-- Fixed known vulnerabilities
-- Updated dependencies
-
-### v0.3.0 - `2024-09-04`
-
-- Added supported cacheHandler with Redis for scalable infrastructure
-- Added Prettier configuration files
-- Updated Docker and dockerignore
-- Fixed known vulnerabilities via `npx yarn-audit-fix`
 
 ### Version History
 

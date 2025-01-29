@@ -6,7 +6,7 @@
 
 - Updated dependencies
 - Added Redis as Next.js Cache Handler
-- New look: [Pantone Color of the year 2025](https://www.pantone.com/color-of-the-year/2025) & [Pallete](https://coolors.co/2e5266-bed0d6-e1dfde-9e7a68-481d24)
+- New look: [Pantone Color of the year 2025](https://www.pantone.com/color-of-the-year/2025) & [Palette](https://coolors.co/2e5266-bed0d6-e1dfde-9e7a68-481d24)
 
 ### [v0.4.0] - `2024-11-12`
 
