@@ -12,6 +12,7 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Last 2 Minor Version)](#-versions-last-2-minor-version)
+    - [v0.5.1 - `2025-02-06`](#v051---2025-02-06)
     - [v0.5.0 - `2025-01-29`](#v050---2025-01-29)
     - [v0.4.0 - `2024-11-12`](#v040---2024-11-12)
     - [Version History](#version-history)
@@ -33,6 +34,10 @@ yarn add axios react-loading-randomizable
 ```
 
 ## 📝 Versions (Last 2 Minor Version)
+
+### v0.5.1 - `2025-02-06`
+
+- Updated dependencies
 
 ### v0.5.0 - `2025-01-29`
 

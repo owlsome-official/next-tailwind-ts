@@ -2,11 +2,19 @@
 
 ## Version History
 
+### [v0.5.1] - `2025-02-06`
+
+- Updated dependencies
+
+[v0.5.1]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.5.1
+
 ### [v0.5.0] - `2025-01-29`
 
 - Updated dependencies
 - Added Redis as Next.js Cache Handler
 - New look: [Pantone Color of the year 2025](https://www.pantone.com/color-of-the-year/2025) & [Palette](https://coolors.co/2e5266-bed0d6-e1dfde-9e7a68-481d24)
+
+[v0.5.0]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.5.0
 
 ### [v0.4.0] - `2024-11-12`
 
