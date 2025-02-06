@@ -2,6 +2,13 @@
 
 ## Version History
 
+### [v0.5.2] - `2025-02-06`
+
+- Removed unused dep
+- Audit fix
+
+[v0.5.2]: https://github.com/buildingwatsize/next-tailwind-ts/releases/tag/v0.5.2
+
 ### [v0.5.1] - `2025-02-06`
 
 - Updated dependencies
