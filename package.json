@@ -1,6 +1,6 @@
 {
   "name": "next-tailwind-ts",
-  "version": "0.5.1",
+  "version": "0.5.3",
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
@@ -11,24 +11,24 @@
   "dependencies": {
     "@neshca/cache-handler": "^1.9.0",
     "clsx": "^2.1.1",
-    "next": "15.1.6",
+    "next": "15.2.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-loading-randomizable": "^1.0.6",
+    "react-loading-randomizable": "^1.1.1",
     "redis": "^4.7.0",
-    "tailwind-merge": "^3.0.1"
+    "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.3",
-    "@types/node": "^22.13.1",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "eslint": "^9.19.0",
-    "eslint-config-next": "15.1.6",
-    "postcss": "^8.5.1",
-    "prettier": "^3.4.2",
+    "@tailwindcss/postcss": "^4.0.13",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "15.2.2",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.3",
-    "typescript": "^5.7.3"
+    "tailwindcss": "^4.0.13",
+    "typescript": "^5.8.2"
   }
 }

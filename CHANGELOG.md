@@ -2,6 +2,12 @@
 
 ## Version History
 
+### [v0.5.3] - `2025-03-13`
+
+- Updated dependencies
+
+[v0.5.3]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v0.5.3
+
 ### [v0.5.2] - `2025-02-06`
 
 - Removed unused dep

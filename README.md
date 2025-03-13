@@ -12,6 +12,7 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Last 2 Minor Version)](#-versions-last-2-minor-version)
+    - [v0.5.3 - `2025-03-13`](#v053---2025-03-13)
     - [v0.5.2 - `2025-02-06`](#v052---2025-02-06)
     - [v0.5.1 - `2025-02-06`](#v051---2025-02-06)
     - [v0.5.0 - `2025-01-29`](#v050---2025-01-29)
@@ -35,6 +36,10 @@ yarn add @neshca/cache-handler redis clsx tailwind-merge react-loading-randomiza
 ```
 
 ## 📝 Versions (Last 2 Minor Version)
+
+### v0.5.3 - `2025-03-13`
+
+- Updated dependencies
 
 ### v0.5.2 - `2025-02-06`
 
