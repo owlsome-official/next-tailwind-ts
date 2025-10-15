@@ -1,61 +1,94 @@
-import { cookies } from "next/headers";
 import {
-  BASE_URL_API,
+  BAD_REQUEST_MESSAGE,
+  CONFLICT_MESSAGE,
+  FORBIDDEN_MESSAGE,
   HTTP_STATUS_CODE,
-  NETWORK_ERROR_TEXT,
-  TOKEN_HEADER_NAME,
-  TOKEN_KEY_NAME,
+  INTERNAL_SERVER_ERROR_MESSAGE,
+  SERVER_UNREACHABLE_MESSAGE,
+  UNAUTHORIZED_MESSAGE,
 } from "./constant";
 
 const updateOptions = async (options?: RequestInit) => {
   const update = { method: "POST", ...options };
-  const store = await cookies();
-  const valueToken = store.get(TOKEN_KEY_NAME)?.value || "";
-  if (valueToken) {
-    update.headers = {
-      "Content-Type": "application/json",
-      ...update.headers,
-      [TOKEN_HEADER_NAME]: valueToken,
-    };
-  }
+  update.headers = {
+    "Content-Type": "application/json",
+    ...update.headers,
+  };
   return update;
 };
 
 export type Fetcher = {
   url: string;
   options?: RequestInit;
-  isAbsolutePath?: boolean;
-  isBlobResponse?: boolean;
 };
-export type ResponseTemplate = {
+export type ResponseTemplate<T> = {
   status: number;
-  data?: typeof Object | Array<typeof Object> | Blob;
+  data?: T;
   error?: string;
+  rawError?: any;
 };
-const fetcher = async ({
+const fetcher = async <T>({
   url,
   options,
-  isAbsolutePath,
-  isBlobResponse,
-}: Fetcher): Promise<ResponseTemplate> => {
+}: Fetcher): Promise<ResponseTemplate<T>> => {
   const logger = console;
   try {
-    const target = isAbsolutePath ? url : `${BASE_URL_API}${url}`;
     logger.info({
-      fetch: target,
-      nextOptions: options?.next,
+      fetch: url,
     });
-    const response = await fetch(target, await updateOptions(options));
-    const result: ResponseTemplate = {
+    const response = await fetch(url, await updateOptions(options));
+    if (!response.ok) {
+      const rawError = await response.json();
+      switch (response.status) {
+        case HTTP_STATUS_CODE.BAD_GATEWAY:
+          return {
+            status: response.status,
+            error: SERVER_UNREACHABLE_MESSAGE,
+            rawError: rawError,
+          };
+        case HTTP_STATUS_CODE.BAD_REQUEST:
+          logger.info({ rawError });
+          return {
+            status: response.status,
+            error: BAD_REQUEST_MESSAGE,
+            rawError: rawError,
+          };
+        case HTTP_STATUS_CODE.UNAUTHORIZED:
+          return {
+            status: response.status,
+            error: UNAUTHORIZED_MESSAGE,
+            rawError: rawError,
+          };
+        case HTTP_STATUS_CODE.FORBIDDEN:
+          return {
+            status: response.status,
+            error: FORBIDDEN_MESSAGE,
+            rawError: rawError,
+          };
+        case HTTP_STATUS_CODE.CONFLICT:
+          return {
+            status: response.status,
+            error: CONFLICT_MESSAGE,
+            rawError: rawError,
+          };
+        default:
+          return {
+            status: response.status,
+            error: INTERNAL_SERVER_ERROR_MESSAGE,
+            rawError: rawError,
+          };
+      }
+    }
+    const result: ResponseTemplate<T> = {
       status: response.status,
-      data: isBlobResponse ? await response.blob() : await response.json(),
+      data: (await response.json()) as T,
     };
     return result;
   } catch (error) {
     logger.error(error);
     return {
       status: HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR,
-      error: NETWORK_ERROR_TEXT,
+      error: INTERNAL_SERVER_ERROR_MESSAGE,
     };
   }
 };

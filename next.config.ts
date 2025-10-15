@@ -1,16 +1,17 @@
 import type { NextConfig } from "next";
 import { defaultConfig } from "next/dist/server/config-shared";
+import path from "path";
 import pkg from "./package.json";
 
 const cspHeader = `
-  script-src 'self' 'unsafe-eval' 'unsafe-inline';
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' blob: data:;
-  font-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
+script-src 'self' 'unsafe-eval' 'unsafe-inline';
+style-src 'self' 'unsafe-inline';
+img-src 'self' blob: data:;
+font-src 'self';
+object-src 'none';
+base-uri 'self';
+form-action 'self';
+frame-ancestors 'none';
 `;
 
 const baseSecurityHeader = [
@@ -90,14 +91,28 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  turbopack: {
+    root: path.join(__dirname, ".."),
+  },
   cacheHandler:
     process.env.NODE_ENV === "production"
-      ? require.resolve("./cache-handler.js")
-      : defaultConfig.cacheHandler,
+      ? require.resolve("./cache-handler.mjs")
+      : undefined,
   cacheMaxMemorySize:
     process.env.NODE_ENV === "production"
       ? 0
       : defaultConfig.cacheMaxMemorySize,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        os: false,
+      };
+    }
+    return config;
+  }
 };
 
 export default nextConfig;

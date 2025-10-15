@@ -65,6 +65,17 @@ export const HTTP_STATUS_CODE = {
   NETWORK_AUTHENTICATION_REQUIRED: 511,
 };
 export const NETWORK_ERROR_TEXT = "Network Error";
+export const SERVER_UNREACHABLE_MESSAGE =
+  "The server is unreachable. Please check your internet connection and policy";
+export const BAD_REQUEST_MESSAGE = "The request is invalid"; // 400
+export const UNAUTHORIZED_MESSAGE =
+  "You are not authorized to access the system or your session has expired"; // 401
+export const FORBIDDEN_MESSAGE =
+  "You are not authorized to access this system. Please check your authorization"; // 403
+export const CONFLICT_MESSAGE =
+  "The system cannot perform this operation because the data is duplicated"; // 409
+export const INTERNAL_SERVER_ERROR_MESSAGE =
+  "The server encountered an internal error. Please try again later"; // 500
 
 // COOKIES AND TOKEN
 export const TOKEN_KEY_NAME =

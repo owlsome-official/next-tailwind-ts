@@ -1,4 +1,10 @@
 "use server";
+import { redirect } from "next/navigation";
+import "server-only";
+
+export const redirectTo = async (url: string) => {
+  redirect(url);
+};
 
 const delay = (ms: number) => {
   return new Promise((resolve) => setTimeout(resolve, ms));

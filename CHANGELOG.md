@@ -2,6 +2,18 @@
 
 ## Version History
 
+### [v0.6.0] - `2025-10-15`
+
+- Updated dependencies
+- Added pre-test for Vitest
+- Added Husky for pre-commit flow
+- Added Cursor rules
+- Added lint-stage
+- Fixed cache-handler for Next15
+- Fixed fetcher for Generics type response
+
+[v0.6.0]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v0.6.0
+
 ### [v0.5.4] - `2025-03-25`
 
 - Updated dependencies
