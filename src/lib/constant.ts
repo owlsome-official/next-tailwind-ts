@@ -83,9 +83,5 @@ export const TOKEN_KEY_NAME =
 export const TOKEN_HEADER_NAME =
   process.env.TOKEN_HEADER_NAME || "X-EMP-INFO-fallback";
 
-// API
-export const BASE_URL_API =
-  process.env.BASE_URL_API || "http://localhost:80/fallback";
-
 // CACHE
 export const CACHE_STORE_TIME_IN_MS = 10 * 60 * 1000; // 10m * 60s * 1000ms = 10m

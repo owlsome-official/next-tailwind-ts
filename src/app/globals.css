@@ -11,8 +11,11 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #9e7a68;
-  --color-accent: #e1dfde;
+  --color-primary: #f1f0ec;
+  --color-primary-deep: #d8d6d0;
+  --color-accent: #4a5568;
+  --color-accent-soft: #a0aec0;
+  --color-warm: #c4b5a0;
 }
 
 /*
@@ -34,17 +37,17 @@
 }
 
 @utility glass-effect {
-  @apply rounded-lg border border-solid border-black/10 bg-white/30 shadow-lg backdrop-blur-lg;
+  @apply rounded-lg border border-solid border-white/20 bg-white/25 shadow-lg backdrop-blur-xl;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f7f4;
+  --foreground: #2d3748;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a202c;
+    --foreground: #f1f0ec;
   }
 }

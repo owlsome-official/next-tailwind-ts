@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "Powered by owlsome-official/next-tailwind-ts",
 };
 export const viewport: Viewport = {
-  themeColor: "#FFBE98",
+  themeColor: "#F1F0EC",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(font.className, "antialiased")}>
-        <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-tr from-primary to-accent p-8 sm:p-12">
+        <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-br from-accent via-accent-soft/40 to-warm p-8 sm:p-12">
           {children}
         </main>
       </body>

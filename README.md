@@ -12,7 +12,7 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Latest Version)](#-versions-latest-version)
-    - [v0.6.0 - `2025-10-15`](#v060---2025-10-15)
+    - [v1.1.0 - `2026-02-23`](#v110---2026-02-23)
     - [Version History](#version-history)
   - [📌 Get Started](#-get-started)
     - [Want some more ?](#want-some-more-)
@@ -20,7 +20,7 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
 ## 📦 Template contains
 
 - [x] React 19.x
-- [x] Next.js 15.x
+- [x] Next.js 16.x
 - [x] Tailwind CSS 4.x
 - [x] TypeScript 5.x
 
@@ -33,15 +33,11 @@ yarn add @neshca/cache-handler redis clsx tailwind-merge react-loading-randomiza
 
 ## 📝 Versions (Latest Version)
 
-### v0.6.0 - `2025-10-15`
+### v1.1.0 - `2026-02-23`
 
+- Upgraded to Next.js 16.1.6 (from 15.5.5)
 - Updated dependencies
-- Added pre-test for Vitest
-- Added Husky for pre-commit flow
-- Added Cursor rules
-- Added lint-stage
-- Fixed cache-handler for Next15
-- Fixed fetcher for Generics type response
+- [Panton 2026 - Cloud Dancer](https://www.pantone.com/color-of-the-year/2026)
 
 ### Version History
 

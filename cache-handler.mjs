@@ -8,12 +8,12 @@ import { createClient } from "redis";
 /*
 NOTE: description of process.env in this file
 - REDIS_URL: Redis URL (e.g. "redis://localhost:6379/0")
-- REDIS_KEY_PREFIX: Redis key prefix (default: "nextjs:")
+- REDIS_KEY_PREFIX: Redis key prefix (default: "nextjs")
 - NEXT_PHASE: a Next.js environment variable, actual Next.js phase
 - NEXT_PRIVATE_DEBUG_CACHE: a Next.js environment variable if true, enable debug mode (e.g. true)
 */
 
-CacheHandler.onCreation(() => {
+CacheHandler.onCreation(({ buildId }) => {
   console.info({
     event: "cache-handler",
     action: "onCreation",
@@ -105,7 +105,7 @@ CacheHandler.onCreation(() => {
 
     const redisCacheHandler = createRedisHandler({
       client: redisClient,
-      keyPrefix: process.env.REDIS_KEY_PREFIX ?? "nextjs:",
+      keyPrefix: `${process.env.REDIS_KEY_PREFIX ?? "nextjs"}:${buildId}:`,
     });
 
     global.cacheHandlerConfigPromise = null;

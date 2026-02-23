@@ -2,7 +2,15 @@
 
 ## Version History
 
-### [v0.6.0] - `2025-10-15`
+### [v1.1.0] - `2026-02-23`
+
+- Upgraded to Next.js 16.1.6 (from 15.5.5)
+- Updated dependencies
+- [Panton 2026 - Cloud Dancer](https://www.pantone.com/color-of-the-year/2026)
+
+[v1.1.0]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v1.1.0
+
+### [v0.6.0] also [v1.0.0] - `2025-10-15`
 
 - Updated dependencies
 - Added pre-test for Vitest
@@ -12,6 +20,7 @@
 - Fixed cache-handler for Next15
 - Fixed fetcher for Generics type response
 
+[v1.0.0]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v1.0.0
 [v0.6.0]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v0.6.0
 
 ### [v0.5.4] - `2025-03-25`

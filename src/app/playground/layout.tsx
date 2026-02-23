@@ -13,7 +13,7 @@ const PlaygroundLayout = ({
 }>) => {
   return (
     <>
-      <div className="mb-8 flex w-full justify-between text-white">
+      <div className="mb-8 flex w-full justify-between text-primary">
         <div className="flex cursor-pointer items-center gap-1 self-start rounded-lg px-2 py-0.5 hover:bg-black/10">
           <IcBaselineHome />
           <Link href={"/"}>Go home</Link>

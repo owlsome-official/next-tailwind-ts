@@ -98,7 +98,7 @@ afterEach(() => {
   // Clear any intervals
   if (typeof window !== "undefined") {
     // Clear any pending timeouts/intervals
-    const highestTimeoutId = setTimeout(() => {}, 0);
+    const highestTimeoutId = setTimeout(() => { }, 0);
     for (let i = 0; i < Number(highestTimeoutId); i++) {
       clearTimeout(i);
       clearInterval(i);
