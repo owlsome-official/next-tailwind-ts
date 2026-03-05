@@ -12,7 +12,7 @@ The Next.js template with TypeScript, and Tailwind CSS for scaffolding your proj
   - [📦 Template contains](#-template-contains)
   - [💎 Pre-loaded dependencies](#-pre-loaded-dependencies)
   - [📝 Versions (Latest Version)](#-versions-latest-version)
-    - [v1.1.0 - `2026-02-23`](#v110---2026-02-23)
+    - [\[v1.1.1\] - `2026-03-05`](#v111---2026-03-05)
     - [Version History](#version-history)
   - [📌 Get Started](#-get-started)
     - [Want some more ?](#want-some-more-)
@@ -33,11 +33,11 @@ yarn add @neshca/cache-handler redis clsx tailwind-merge react-loading-randomiza
 
 ## 📝 Versions (Latest Version)
 
-### v1.1.0 - `2026-02-23`
+### [v1.1.1] - `2026-03-05`
 
-- Upgraded to Next.js 16.1.6 (from 15.5.5)
-- Updated dependencies
-- [Panton 2026 - Cloud Dancer](https://www.pantone.com/color-of-the-year/2026)
+- Upgraded @fortedigital/nextjs-cache-handler to v3.0.1
+- Updated various devDependencies including @tailwindcss/postcss to v4.2.1, eslint to v10.0.2, and typescript-eslint to v8.56.1.
+- Updated yarn.lock to reflect these changes.
 
 ### Version History
 
