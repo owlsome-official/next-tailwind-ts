@@ -2,6 +2,14 @@
 
 ## Version History
 
+### [v1.1.1] - `2026-03-05`
+
+- Upgraded @fortedigital/nextjs-cache-handler to v3.0.1
+- Updated various devDependencies including @tailwindcss/postcss to v4.2.1, eslint to v10.0.2, and typescript-eslint to v8.56.1.
+- Updated yarn.lock to reflect these changes.
+
+[v1.1.1]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v1.1.1
+
 ### [v1.1.0] - `2026-02-23`
 
 - Upgraded to Next.js 16.1.6 (from 15.5.5)
