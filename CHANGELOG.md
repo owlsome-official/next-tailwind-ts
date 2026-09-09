@@ -2,6 +2,12 @@
 
 ## Version History
 
+### [v1.1.2] - `2026-09-08`
+
+- Updated dependencies
+
+[v1.1.2]: https://github.com/owlsome-official/next-tailwind-ts/releases/tag/v1.1.2
+
 ### [v1.1.1] - `2026-03-05`
 
 - Upgraded @fortedigital/nextjs-cache-handler to v3.0.1
